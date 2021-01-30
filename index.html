@@ -68,7 +68,7 @@
                         <input id="first-count" class="inp-style inp-width" type="number" name="" value="0">
                     </div>
                     <div class="plus-minus-btn">
-                        <p> <span id="firstIncrease">+</span> <span id="firstDecrease">-</span> </p>
+                        <p> <span onclick="handleTicketChange('first', true)">+</span> <span onclick="handleTicketChange('first', false)">-</span> </p>
                     </div>
                 </div>
                 <div class="input-group f-class">
@@ -116,13 +116,7 @@
     </main>
     
     <script>
-        document.getElementById("firstIncrease").addEventListener('click', function () {
-            handleTicketChange('first', true)
-        })
-        document.getElementById("firstDecrease").addEventListener('click', function () {
-            handleTicketChange('first', false)
-        })
-
+        
         function handleTicketChange(ticket, isIncrease) {
             const ticketCount = getInputValue(ticket);
 
